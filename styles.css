@@ -101,13 +101,22 @@ nav.scrolled {
 }
 
 .nav-links a {
-    color: #fff;
-    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 15px;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
+}
+
+.nav-links a i {
+    margin-right: 5px;
+}
+
+.nav-links a[download] {
+    display: inline;
 }
 
 .hero {
