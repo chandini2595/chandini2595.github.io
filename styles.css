@@ -333,20 +333,28 @@ nav.scrolled {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
+    gap: 10px;
 }
 
 .project-header h3 {
     color: var(--secondary-color);
-    margin-bottom: 10px;
-    width: 100%;
+    margin: 0;
+    flex: 1;
+}
+
+.project-header .date {
+    order: 2;
+    margin-left: auto;
 }
 
 .project-tech {
     color: var(--accent-color);
     font-weight: 500;
     font-size: 0.95rem;
+    width: 100%;
+    order: 3;
 }
 
 .project-item ul {
@@ -356,6 +364,28 @@ nav.scrolled {
 
 .project-item li {
     margin-bottom: 10px;
+}
+
+.project-header h3 a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.project-header h3 a:hover {
+    color: var(--primary-color);
+}
+
+.project-header h3 a i {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.project-header h3 a:hover i {
+    opacity: 1;
 }
 
 /* Experience Styles */
@@ -369,9 +399,8 @@ nav.scrolled {
 
 .experience-header {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
@@ -390,7 +419,7 @@ nav.scrolled {
 }
 
 /* Achievements Styles */
-.achievements-list {
+.achievements-list, .extracurricular-list {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
@@ -399,8 +428,14 @@ nav.scrolled {
     padding-left: 50px;
 }
 
-.achievements-list li {
+.achievements-list li, .extracurricular-list li {
     margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.achievements-list li:last-child, .extracurricular-list li:last-child {
+    margin-bottom: 0;
 }
 
 /* Footer Styles */
@@ -492,7 +527,7 @@ footer {
     }
     
     .nav-links li {
-        margin: 0 15px;
+        margin: 0 10px;
     }
     
     .hero-content h1 {
@@ -586,10 +621,59 @@ footer {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
+    .company-info {
+        width: 100%;
+    }
+    
+    .company-logo {
+        width: 60px;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .achievements-list, .extracurricular-list {
+        padding: 20px;
+        padding-left: 40px;
+    }
 }
 
 @media (max-width: 1200px) {
     .skill-category.featured {
         grid-column: span 1;
     }
+}
+
+.company-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.company-logo {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+.company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.company-details h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
 } 
