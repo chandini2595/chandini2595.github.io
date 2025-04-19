@@ -133,27 +133,39 @@ nav.scrolled {
 .contact-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 1.5rem;
 }
 
 .contact-links a {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    padding: 8px 16px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
 }
 
 .contact-links a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
-.contact-links i {
-    margin-right: 5px;
+.contact-links a .fa-linkedin:hover {
+    color: #0a66c2;
+}
+
+.contact-links a .fa-github:hover {
+    color: #f5f5f5;
+}
+
+.contact-links a .fa-youtube:hover {
+    color: #ff0000;
 }
 
 /* About Styles */
@@ -327,6 +339,10 @@ footer {
 
 .social-links a:hover {
     color: var(--accent-color);
+}
+
+.social-links a .fa-youtube:hover {
+    color: #ff0000;
 }
 
 /* Profile Styles */
