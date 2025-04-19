@@ -753,4 +753,72 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 20px;
+}
+
+.animated-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    margin: 1rem 0;
+}
+
+.static-text {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.dynamic-text {
+    margin-left: 8px;
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.dynamic-text::before {
+    content: "Data Scientist";
+    animation: animate 10s steps(1) infinite;
+}
+
+@keyframes animate {
+    0%, 25% {
+        content: "Data Scientist";
+        color: #FF6B6B; /* Bright coral red */
+    }
+    25%, 50% {
+        content: "Data Engineer";
+        color: #4ECDC4; /* Bright turquoise */
+    }
+    50%, 75% {
+        content: "ML Engineer";
+        color: #FFD93D; /* Bright yellow */
+    }
+    75%, 100% {
+        content: "Software Engineer";
+        color: #6C63FF; /* Bright purple */
+    }
+}
+
+.dynamic-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid var(--primary-color);
+    animation: typing 2.5s steps(20) infinite;
+    background: rgba(44, 62, 80, 0.9);
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
 } 
