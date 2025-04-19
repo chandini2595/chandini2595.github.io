@@ -188,17 +188,43 @@ nav.scrolled {
 .education-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 15px;
 }
 
-.education-header h3 {
+.college-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.college-logo {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+.college-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.college-details h3 {
     color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.college-details p {
+    margin: 0;
+    color: var(--text-light);
 }
 
 .date {
     color: var(--primary-color);
     font-weight: 500;
+    white-space: nowrap;
 }
 
 /* Skills Styles */
@@ -456,5 +482,22 @@ footer {
 
     .contact-links {
         justify-content: center;
+    }
+
+    .education-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .college-info {
+        width: 100%;
+    }
+    
+    .college-logo {
+        width: 60px;
+    }
+    
+    .date {
+        align-self: flex-start;
     }
 } 
