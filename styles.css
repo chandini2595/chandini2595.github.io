@@ -133,9 +133,7 @@ nav.scrolled {
 .contact-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 15px;
-    margin-top: 30px;
 }
 
 .contact-links a {
@@ -145,6 +143,9 @@ nav.scrolled {
     padding: 8px 16px;
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .contact-links a:hover {
@@ -329,21 +330,43 @@ footer {
 }
 
 /* Profile Styles */
-.profile-section {
+.name-section {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Styles */
@@ -375,7 +398,7 @@ footer {
     }
     
     .contact-links {
-        flex-direction: column;
+        justify-content: center;
     }
     
     .project-header, .experience-header, .education-header {
@@ -395,13 +418,27 @@ footer {
         margin-top: 20px;
     }
 
-    .profile-section {
+    .name-section {
         flex-direction: column;
-        gap: 1rem;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
     }
 
     .profile-image {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .text-content p {
+        font-size: 1.1rem;
+    }
+
+    .contact-links {
+        justify-content: center;
     }
 } 
